@@ -1,3 +1,10 @@
 ul li {
     list-style: none;
 }
+mat-toolbar{
+    min-height: 40px;
+}
+mat-toolbar-row{
+    height:40px;
+    padding: 0px;
+}
