@@ -1,25 +1,21 @@
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DefaultComponent } from './layouts/default/default.component';
-import { DashboardComponent } from './modules/dashboard/dashboard.component';
-import { PostsComponent } from './modules/posts/posts.component';
 
-
-const routes: Routes = [{
-  path: '',
-  component: DefaultComponent,
-  children: [
-    {
-      path: '',
-      component: DashboardComponent
-    },
-    {
-      path: 'posts',
-      component: PostsComponent
-    }
-  ]
- }];
-
+const routes: Routes = [
+  {
+    path: '',
+    loadChildren: () => import('src/app/modules/customer/customer-routing.module').then(m => m.CustomerRoutingModule)
+  },
+  {
+    path: 'customer',
+    loadChildren: () => import('src/app/modules/customer/customer-routing.module').then(m => m.CustomerRoutingModule)
+  },
+  {
+    path: 'employee',
+    loadChildren: () => import('src/app/modules/employee/employee-routing.module').then(m => m.EmployeeRoutingModule)
+  },
+  { path: '',   redirectTo: '/customer', pathMatch: 'full' }
+];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

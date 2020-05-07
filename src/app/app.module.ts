@@ -5,7 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DefaultModule } from './layouts/default/default.module';
-
+import { CustomerModule } from 'src/app/modules/customer/customer.module';
+import { EmployeeModule } from 'src/app/modules/employee/employee.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,9 @@ import { DefaultModule } from './layouts/default/default.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DefaultModule
+    DefaultModule,
+    CustomerModule,
+    EmployeeModule
    
   ],
   providers: [],
