@@ -12,12 +12,14 @@ import { MatListModule, MatList } from '@angular/material/list';
 import { CustomerRoutingModule } from './customer-routing.module';
 import { CustomerComponent } from './customer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { CreateComponent } from './create/create.component';
 
 
 @NgModule({
   declarations: [
     CustomerComponent,
-    SidebarComponent
+    SidebarComponent,
+    CreateComponent
   ],
   imports: [
     CommonModule,
