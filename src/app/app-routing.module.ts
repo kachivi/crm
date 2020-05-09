@@ -14,6 +14,10 @@ const routes: Routes = [
     path: 'employee',
     loadChildren: () => import('src/app/modules/employee/employee-routing.module').then(m => m.EmployeeRoutingModule)
   },
+  {
+    path: 'reports',
+    loadChildren: () => import('src/app/modules/analytics/analytics-routing.module').then(m => m.AnalyticsRoutingModule)
+  },
   { path: '',   redirectTo: '/customer', pathMatch: 'full' }
 ];
 @NgModule({
