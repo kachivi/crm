@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { EmployeeComponent } from './employee.component';
-import { PostsComponent } from '../posts/posts.component';
+
 import { DefaultComponent } from 'src/app/layouts/default/default.component';
+import { EmployeeComponent } from './employee.component';
+import { SearchEmployeeComponent } from './search-employee/search-employee.component';
+import { AddEmployeeComponent } from './add-employee/add-employee.component';
 
 const employeeRoutes: Routes = [
   {
@@ -10,9 +12,9 @@ const employeeRoutes: Routes = [
     children:[{ 
         path: '', component: EmployeeComponent,
         children:[
-          {
-            path: '', component: PostsComponent
-          }
+          { path: 'add', component: AddEmployeeComponent },
+          { path: 'search', component: SearchEmployeeComponent },
+          { path: '',   redirectTo: '/employee/search', pathMatch: 'full' }
         ]
       }]
   }

@@ -14,12 +14,11 @@ import { EmployeeModule } from 'src/app/modules/employee/employee.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
     DefaultModule,
     CustomerModule,
     EmployeeModule
-   
   ],
   providers: [],
   bootstrap: [AppComponent]

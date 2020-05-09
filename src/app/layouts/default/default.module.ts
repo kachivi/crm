@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { DefaultComponent } from './default.component';
-import { CustomerModule } from 'src/app/modules/customer/customer.module';
+import { DefaultComponent } from 'src/app/layouts/default/default.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
@@ -13,8 +12,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
   imports: [
     CommonModule,
     RouterModule,
-    SharedModule,
-    CustomerModule,
+    SharedModule
   ]
 })
 export class DefaultModule { }

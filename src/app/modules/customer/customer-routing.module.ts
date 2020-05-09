@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CustomerComponent } from './customer.component';
-import { CreateComponent } from './create/create.component';
-import { DashboardComponent } from '../dashboard/dashboard.component';
+
 import { DefaultComponent } from 'src/app/layouts/default/default.component';
+import { CustomerComponent } from './customer.component';
+import { AddCustomerComponent } from './add-customer/add-customer.component';
+import { DashboardComponent } from '../dashboard/dashboard.component';
+import { SearchCustomerComponent } from './search-customer/search-customer.component';
 
 const customerRoutes: Routes = [
   {
@@ -11,12 +13,9 @@ const customerRoutes: Routes = [
     children:[{ 
         path: '', component: CustomerComponent,
         children:[
-          {
-            path: 'create-customer', component: CreateComponent
-          },
-          {
-            path: '', component: DashboardComponent
-          }
+          { path: 'add', component: AddCustomerComponent },
+          { path: 'search', component: SearchCustomerComponent },
+          { path: '',   redirectTo: '/customer/search', pathMatch: 'full' }
         ]
       }]
   }
