@@ -11,7 +11,7 @@ import {CustomersDataSource} from '../services/customers.datasource';
 
 @Component({
   selector: 'app-search-customer',
-  templateUrl: './search-customers.component.html',
+  templateUrl: './search-customer.component.html',
   styleUrls: ['./search-customer.component.scss']
 })
 export class SearchCustomerComponent implements OnInit, AfterViewInit {
