@@ -1,0 +1,23 @@
+
+.customer-search {
+    text-align: left;
+    margin: 50 auto;
+}
+.search-field {
+    align-content: stretch;
+}
+
+.spinner-container {
+    height: 360px;
+    width: 390px;
+    position: fixed;
+}
+
+.customers-table {
+    min-height: 360px;
+    margin-top: 10px;
+}
+
+.spinner-container mat-spinner {
+    margin: 100px auto 0 auto;
+}

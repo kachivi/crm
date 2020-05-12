@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DefaultComponent } from 'src/app/layouts/default/default.component';
-import { CoursesCardListComponent } from './courses-card-list/courses-card-list.component';
 import { CourseComponent } from './course.component';
 import { HomeComponent } from './home/home.component';
 import { CourseResolver } from './services/course.resolver';

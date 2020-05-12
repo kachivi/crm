@@ -1,0 +1,79 @@
+<div class="customer-search">
+
+    <h2>Customers</h2>
+
+    <mat-form-field class="search-field">
+
+        <input matInput placeholder="Search Customers" #input>
+
+    </mat-form-field>
+
+    <div class="spinner-container" *ngIf="dataSource.loading$ | async">
+
+        <mat-spinner></mat-spinner>
+
+    </div>
+
+    <mat-table class="customers-table mat-elevation-z8" [dataSource]="dataSource"
+               matSort matSortActive="firstName" matSortDirection="asc" matSortDisableClear>
+
+        <ng-container matColumnDef="firstName">
+
+            <mat-header-cell *matHeaderCellDef mat-sort-header>First Name</mat-header-cell>
+
+            <mat-cell *matCellDef="let customer">{{customer.firstName}}</mat-cell>
+
+        </ng-container>
+
+        <ng-container matColumnDef="lastName">
+
+            <mat-header-cell *matHeaderCellDef>Last Name</mat-header-cell>
+
+            <mat-cell *matCellDef="let customer">{{customer.lastName}}</mat-cell>
+
+        </ng-container>
+
+        <ng-container matColumnDef="gender">
+
+            <mat-header-cell *matHeaderCellDef>Gender</mat-header-cell>
+
+            <mat-cell *matCellDef="let customer">{{customer.gender}}</mat-cell>
+
+        </ng-container>
+
+        <ng-container matColumnDef="city">
+
+            <mat-header-cell *matHeaderCellDef>City</mat-header-cell>
+
+            <mat-cell *matCellDef="let customer">{{customer.city}}</mat-cell>
+
+        </ng-container>
+        <ng-container matColumnDef="zipCode">
+
+            <mat-header-cell *matHeaderCellDef>Zip</mat-header-cell>
+
+            <mat-cell *matCellDef="let customer">{{customer.zipCode}}</mat-cell>
+
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+
+        <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+
+    </mat-table>
+
+
+    <mat-paginator [length]="10" [pageSize]="3"
+                   [pageSizeOptions]="[3, 5, 10]"></mat-paginator>
+<!--
+    <mat-paginator [length]="course?.lessonsCount" [pageSize]="3"
+                   [pageSizeOptions]="[3, 5, 10]"></mat-paginator>
+-->                   
+
+</div>
+
+
+
+
+
+
