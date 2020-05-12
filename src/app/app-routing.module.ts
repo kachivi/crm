@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 const routes: Routes = [
   {
     path: 'customer',
@@ -14,6 +13,12 @@ const routes: Routes = [
     path: 'reports',
     loadChildren: () => import('src/app/modules/analytics/analytics-routing.module').then(m => m.AnalyticsRoutingModule)
   },
+  {
+    path: 'courses',
+    loadChildren: () => import('src/app/modules/course/course-routing.module').then(m => m.CourseRoutingModule),
+    pathMatch: 'prefix'
+  },
+  
   { path: '',   redirectTo: '/customer', pathMatch: 'full' }
 ];
 @NgModule({

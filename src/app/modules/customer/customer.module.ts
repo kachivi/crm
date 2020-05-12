@@ -37,6 +37,6 @@ import { SearchCustomerComponent } from './search-customer/search-customer.compo
   exports:[
     CustomerComponent,
     CustomerRoutingModule
-  ]
+  ],
 })
 export class CustomerModule { }

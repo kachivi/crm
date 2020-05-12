@@ -1,4 +1,4 @@
-<mat-toolbar color="primary" >
+<mat-toolbar color="accent">
     <mat-toolbar-row>
         <button mat-icon-button><mat-icon>menu</mat-icon></button>
         <span class="menu-spacer">&nbsp;</span>
@@ -7,9 +7,12 @@
 
         <div fxFlex fxFlexLayout='row' fxLayoutAlign='flex-start'>
             <ul fxLayout='row' fxLayoutGap='20px'>
-                <li><a mat-button routerLink="/customer" routerLinkActive="active">Customer</a></li>
-                <li><a mat-button routerLink="/employee" routerLinkActive="active">Employee</a></li>
-                <li><a mat-button routerLink="/reports" routerLinkActive="active">Reports</a></li>
+                <nav mat-tab-nav-bar color="warn">
+                    <a mat-tab-link *ngFor="let link of links"
+                    [routerLink]="link.path"
+                    routerLinkActive #rla="routerLinkActive"
+                    [active]="rla.isActive"> {{ link.label }} </a>
+                </nav>
             </ul>
         </div>
 

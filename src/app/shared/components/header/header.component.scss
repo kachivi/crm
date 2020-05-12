@@ -2,9 +2,17 @@ ul li {
     list-style: none;
 }
 mat-toolbar{
-    min-height: 40px;
+    min-height: 46px;
 }
 mat-toolbar-row{
-    height:40px;
+    height:42px;
     padding: 0px;
 }
+//.active{
+//    background: #C5CAE9;
+//    color: black;
+//}
+//button:focus, button:active:focus, button.active:focus {
+//    outline: none !important;
+//    outline-style: none !important;
+//}
