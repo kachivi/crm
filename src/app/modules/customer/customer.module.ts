@@ -31,6 +31,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { SearchCustomerComponent } from './search-customer/search-customer.component';
 import { CustomerService } from './services/customer.service';
+import { SharedModule} from '../../shared/shared.module'
 
   @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { CustomerService } from './services/customer.service';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    CustomerRoutingModule
+    CustomerRoutingModule,
+    SharedModule
  ],
   exports:[
     CustomerComponent,

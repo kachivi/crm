@@ -10,13 +10,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs'
-
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CropperComponent } from './components/cropper/cropper.component';
+import { UploadComponent } from './components/upload/upload.component';
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CropperComponent,
+    UploadComponent
   ],
   imports: [
     CommonModule,
@@ -29,11 +32,14 @@ import { FooterComponent } from './components/footer/footer.component';
     MatButtonModule,
     MatSidenavModule,
     MatListModule,
-    MatTabsModule
+    MatTabsModule,
+    
   ],
   exports: [
     HeaderComponent, 
-    FooterComponent, 
+    FooterComponent,
+    CropperComponent,
+    UploadComponent
   ]
 })
 export class SharedModule { }
